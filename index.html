@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Records Management</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            background: #8fa1b3;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1;
+            background: #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: 2px solid black;
+            background: white;
+        }
+
+        table {
+            width: 95%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #8fa1b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Set and Get Data</h1>
+
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="box">
+            <h3>Enter Your Name</h3>
+            <input type="text" id="name">
+
+            <h3>Enter Your Email</h3>
+            <input type="email" id="email">
+
+            <h3>Enter Your Phone</h3>
+            <input type="text" id="phone">
+
+            <h3>Enter Your Key</h3>
+            <input type="text" id="key">
+
+            <button onclick="addRecord()">Add Records</button>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="box">
+            <h3>Enter The Key</h3>
+            <input type="text" id="searchKey">
+
+            <div id="result" style="margin-top:10px;">
+                Result will show here...
+            </div>
+
+            <button onclick="getRecord()">Get Records</button>
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <h2 style="text-align:center;">All Records</h2>
+
+    <table border="1" id="recordsTable">
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src=".\js\script.js"> </script>
+</body>
+
+</html>
